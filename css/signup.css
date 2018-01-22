@@ -1,0 +1,142 @@
+/*
+font-family: 'Oswald', sans-serif;
+font-family: 'Titillium Web', sans-serif;
+font-family: 'PT Sans Narrow', sans-serif;
+*/
+body {
+  color: #474C61;
+}
+
+h2 {
+  /*background-color: rgba(255, 250, 255, 0.8);*/
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0.4em 0 0 0;
+  padding: 0;
+}
+
+
+button {
+  background-color: #fc1ebd;
+  color: white;
+  margin: 5vh auto;
+}
+
+input {
+  border-radius: 6px;
+  border: 1px solid #D8D8D8;
+  height: 6vh;
+  margin: 0;
+  padding: 0.2em;
+  width: 100%;
+}
+
+input:focus {
+  outline-color: #DCDCDC;
+  padding: 0.2em;
+}
+
+p {
+  margin: 0;
+}
+
+
+
+.header {
+  background-color: #FC1FBE;
+  border-bottom: 2px solid #352882;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  color: white;
+  height: 15vh;
+}
+
+.main {
+  padding: 3em 1em 2em 1em;
+}
+
+
+
+#inputGroupSelect  {
+  font-size: 0.6em;
+  margin: 0;
+  padding: 0 0 0 0.6em;
+}
+
+
+#successful-registration{
+  background: url("../assets/img/lyft-drivers.png")left bottom no-repeat;
+  background-size: 180%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#successful-registration span img{
+  width: 17%;
+}
+
+#successful-registration .welcome {
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -1em;
+  padding-top: 0;
+}
+
+#successful-registration .check {
+  margin-top: 15vh;
+  width: 75%;
+}
+
+.fa {
+  color:#352882;
+}
+
+.form {
+  margin: 5vh 0;
+}
+
+.form p {
+  margin: 1em 0;
+}
+
+.code-number {
+  border-bottom: 1px solid #FC1FBE;
+  margin-left: -6px;
+}
+
+.modal-content {
+  background-color: black;;
+  background: url("../assets/img/lyft-work.png") no-repeat center;
+  background-size: contain;
+}
+
+.btn-modal {
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 5px;
+  color: #474C61;
+  margin: 0;
+  padding: 0.7em 1em;
+}
+
+#code-input {
+  width: 50%;
+}
+#personal-info .fa{
+  padding: 0.4em 0.6em 0 0;
+}
+
+#personal-info label {
+  margin-top: 0.3em;
+}
+
+#checkTerms {
+  margin-top: 0;
+  padding: 0;
+  width: 5%;
+}

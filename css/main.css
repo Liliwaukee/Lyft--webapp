@@ -1,0 +1,61 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("../assets/img/drive.jpg") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+/*-------VISTA SPLASH--------------*/
+#first-view {
+  background-color: #FC1EBD;
+  height: 100vh;
+}
+
+#splash {
+  height: 100vh;
+}
+
+#splash img{
+  width: 50%;
+}
+
+
+/*-------VISTA CON BOTONES DE INICIO--------------*/
+
+#second-view {
+  background-size: cover;
+  height: 100vh;
+
+}
+
+#second-view button {
+  background-color: rgba(250, 250, 250, 0.2);
+  border: 2px solid white;
+  width: 35%;
+}
+
+#second-view a {
+  color: white;
+}
+
+.logo-pink {
+  width: 60%;
+}
+
+#logo {
+  background-color: rgba(232, 17, 146, 0.1);
+  height: 80vh;
+}

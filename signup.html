@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lyft</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/signup.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,600|PT+Sans+Narrow:400,700|Titillium+Web:300,400,600,900" rel="stylesheet">
+</head>
+<body>
+  <!--++++++++Container para introducir teléfono ++++++++-->
+  <div class="container-fluid " id="phone-number-view">
+    <div class="row header p-1 text-center">
+      <div class="col-1 d-flex align-items-center" >
+        <span><a href="index.html"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></a></i></span>
+      </div>
+      <div class="col-10">
+        <h4>SIGN UP</h4>
+        <p>Join now for free ride credit</p>
+      </div>
+    </div>
+    <div class="row main">
+      <div class="col-12 text-center">
+        <h5>Enter your phone number</h5>
+        <form class="form">
+          <div class="row d-flex align-items-baseline">
+            <div class="col-3 offset-1">
+              <select class="custom-select" id="inputGroupSelect">
+                <option value="arg" data-country="54">ARG</option>
+                <option value="aus" data-country="61">AUS</option>
+                <option value="brz" data-country="55">BRZ</option>
+                <option value="cad" data-country="1">CAD</option>
+                <option value="chi" data-country="56">CHI</option>
+                <option value="esp" data-country="34">ESP</option>
+                <option value="usa" data-country="01">USA</option>
+                <option value="mex" data-country="52">MEX</option>
+                <option value="uru" data-country="598">URU</option>
+              </select>
+            </div>
+            <div class="col-1"><span class="code-number">+00</span></div>
+            <div class="col-6">
+              <input type="number" id="number-input" autocomplete="off" placeholder="Enter 10 numbers" class="validate" pattern="[0-9]{10}" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <p class="form-text">We´ll send a text to verify your phone</p>
+              <button type="button" class="btn btn-lg btn-block" id="btn-submit-phone" disabled data-toggle="modal" data-target="#codeModalCenter">NEXT</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  <!--++++++++Modal que envia código de confirmación ++++++++-->
+  <div class="modal fade" id="codeModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-body text-center">
+          <h2 id="container-code-random"></h2>
+          <button type="button" class="btn-modal" data-dismiss="modal" id="btn-close-modal-code">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--++++++++Verificación de código random ++++++++-->
+  <div class="cont d-none text-center" id="verify-code-random">
+    <div class="row header p-1">
+      <div class="col-1 d-flex align-items-center" >
+      <!--   <button class="btn-back"></button>-->
+       <a href="#" class="btn-back"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></a></i>
+      </div>
+      <div class="col-11">
+        <h4>Verify your phone code</h4>
+        <p>Join now for free ride credit</p>
+      </div>
+    </div>
+    <div class="row main">
+      <div class="col-12">
+        <h5 class="p-1">Enter your code</h5>
+        <form class="needs-validation" validate>
+          <span>LAB- </span>
+          <input type="number" id="code-input" class="d-inline" autocomplete="off" placeholder="000" required>
+          <p class="p-4">Enter the code sent +52</p>
+          <button type="button" class="btn btn-lg btn-block" id="btn-submit-code" disabled>NEXT</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--++++++++Conatiner de formulario personal ++++++++-->
+  <div class="cont d-none text-center" id="personal-info">
+    <div class="row header">
+      <div class="col-1 d-flex align-items-center" >
+        <span><a href="#" class="btn-back"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></a></i></span>
+      </div>
+      <div class="col-10">
+        <h4>Sign up</h4>
+        <p>Join now for free ride credit</p>
+      </div>
+    </div>
+    <div class="row main">
+      <div class="col-12">
+        <form>
+          <div class="form-row">
+            <div class="input-group col-6 mb-2">
+              <span><i class="fa fa-user-o fa-fw"></i></span>
+              <input type="text" class="form-control" placeholder="First name" aria-label="Firstname" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group col-6 mb-2">
+              <input type="text" class="form-control" placeholder="Last name" aria-label="Lastname" aria-describedby="basic-addon1">
+            </div>
+          </div>
+          <div class="input-group">
+            <span><i class="fa fa-envelope-o fa-fw"></i></span>
+            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+          </div>
+          <div class="form-check p-2">
+            <input type="checkbox" class="form-check-input" id="checkTerms">
+            <label class="form-check-label" for="checkTerms">I agree to Lyft´s <a href="#">Terms of service. </a></label>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <button type="button" class="btn btn-block" id="btn-close-personal-info">Next</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+
+  <!--++++++++Conatiner registro exitoso ++++++++-->
+  <!---->
+  <div class="d-none text-center" id="successful-registration">
+    <div class="row">
+      <div class="col-12">
+        <img src="assets/img/check-01.png" alt="" class="img-fluid check">
+        <p class="welcome">WELCOME TO  <span><img src="assets/img/lyft-logo-pink.png" alt="" class="img-fluid"></span> !</p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--++++++++Scripts ++++++++-->
+</body>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://use.fontawesome.com/ea77434b70.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+
+</html>
