@@ -29,6 +29,7 @@ function loadPage() {
 
   $("#number-input").keyup(validationPhone);
   $btnSendForm.click(randomCodeAlert);
+  $("#btn-resend").click(randomCodeAlertB);
   $btnCloseModalCode.click(verificationCodeView);
   $("#code-input").keyup(verificationCode);
   $btnSubmitCode.click(personalFormView);
@@ -63,6 +64,14 @@ function randomCodeAlert() { //Funcion para generar el código random de 3 digit
   $containerCodeRandom.text("LAB-" + $codeRandom);
   verificationCode($codeRandom);
 }
+
+function randomCodeAlertB() { //Funcion para generar el código random de 3 digitos
+  var $containerCodeRandom = $("#container-code-random")
+  var $codeRandom = Math.floor((Math.random() * 900) + 100);
+  alert("LAB-" + $codeRandom);
+}
+
+
 
 function verificationCodeView() { //Funcion que muestra la vista de verificación de código y le pone la clase hide a todos los demás containers
   var $containerVerifyCodeRandom = $("#verify-code-random");

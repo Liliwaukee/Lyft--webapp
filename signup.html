@@ -49,7 +49,7 @@
           <div class="row">
             <div class="col-12">
               <p class="form-text">We´ll send a text to verify your phone</p>
-              <button type="button" class="btn btn-lg btn-block" id="btn-submit-phone" disabled data-toggle="modal" data-target="#codeModalCenter">NEXT</button>
+              <button type="button" class="btn btn-lg btn-block" id="btn-submit-phone" disabled data-toggle="modal" data-target=".codeModalCenter">NEXT</button>
             </div>
           </div>
         </form>
@@ -57,16 +57,6 @@
     </div>
 
   <!--++++++++Modal que envia código de confirmación ++++++++-->
-  <div class="modal fade" id="codeModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content p-3">
-        <div class="modal-body text-center">
-          <h2 id="container-code-random"></h2>
-          <button type="button" class="btn-modal" data-dismiss="modal" id="btn-close-modal-code">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!--++++++++Verificación de código random ++++++++-->
   <div class="cont d-none text-center" id="verify-code-random">
@@ -87,11 +77,25 @@
           <span>LAB- </span>
           <input type="number" id="code-input" class="d-inline" autocomplete="off" placeholder="000" required>
           <p class="p-4">Enter the code sent +52</p>
+          <button type="button" class="btn btn-lg btn-block" id="btn-resend">Resend code</button>
+
           <button type="button" class="btn btn-lg btn-block" id="btn-submit-code" disabled>NEXT</button>
         </form>
       </div>
     </div>
   </div>
+
+  <div class="modal fade codeModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content p-3">
+        <div class="modal-body text-center">
+          <h2 id="container-code-random"></h2>
+          <button type="button" class="btn-modal" data-dismiss="modal" id="btn-close-modal-code">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!--++++++++Container de formulario personal ++++++++-->
   <div class="cont d-none text-center" id="personal-info">
