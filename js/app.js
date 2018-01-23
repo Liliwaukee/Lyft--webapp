@@ -30,20 +30,15 @@ function loadPage() {
   $("#number-input").keyup(validationPhone);
   $btnSendForm.click(randomCodeAlert);
   $btnCloseModalCode.click(verificationCodeView);
-  //$("#code-input").keyup(verificationCode);
+  $("#code-input").keyup(verificationCode);
   $btnSubmitCode.click(personalFormView);
   $btnPersonalInfo.click(successfulRegistration);
-  $("#inputGroupSelect").change(showAreaCodePhone)
-  $btnBack.click(backView)
+  $("#inputGroupSelect").change(showAreaCodePhone);
+  $("#checkTerms").click(personalFormValidate)
 
 
 }
 
-
-function backView() {
-  //window.history.back();
-
-}
 
 function validationPhone() { //función para validar el número telefónico
     if($(this).val().trim().length === 10 ) {
@@ -76,18 +71,17 @@ function verificationCodeView() { //Funcion que muestra la vista de verificació
 }
 
 function verificationCode(codeRandom) {
-  /*
+
   if($(this).val().trim().length === 3) {
     $("#btn-submit-code").removeAttr("disabled");
   } else {
     $btnSubmitCode.attr("disabled" , true);
   }
 }
-*/
+/*
 console.log(codeRandom);
 
 var $codeInput = $("#code-input");
-$("#code-input").keyup(valueInput);
 
 var $codeInputValue = $("#code-input").val();
 console.log($codeInputValue);
@@ -98,10 +92,8 @@ console.log($codeInputValue);
   } else {
     $btnSubmitCode.attr("disabled" , true);
   }
-
 }
-
-
+*/
 function personalFormView() {
   var $containerPersonalForm = $("#personal-info");
   $containerPersonalForm.removeClass("d-none");
@@ -109,12 +101,20 @@ function personalFormView() {
 }
 
 
+function personalFormValidate() {
+
+  if( $("#personal-form-name").val().length > 0 && $("#personal-form-last-name").val().length > 0 && $("#personal-form-email") !== null && $("#checkTerms").is(':checked') ){
+       $("#btn-close-personal-info").removeAttr("disabled");
+  } else {
+       $("#btn-close-personal-info").attr("disabled" , true);
+  }
+}
+
 function successfulRegistration() {
   var $successfulRegistrationView = $("#successful-registration");
   $successfulRegistrationView.removeClass("d-none");
   $successfulRegistrationView.siblings().addClass("d-none");
 }
-
 
 
 $(document).ready(loadPage);

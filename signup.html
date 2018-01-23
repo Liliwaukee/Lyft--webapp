@@ -27,7 +27,9 @@
         <form class="form">
           <div class="row d-flex align-items-baseline">
             <div class="col-3 offset-1">
-              <select class="custom-select" id="inputGroupSelect">
+              <select class="custom-select" id="inputGroupSelect" required data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+
+
                 <option value="arg" data-country="54">ARG</option>
                 <option value="aus" data-country="61">AUS</option>
                 <option value="brz" data-country="55">BRZ</option>
@@ -71,7 +73,7 @@
     <div class="row header p-1">
       <div class="col-1 d-flex align-items-center" >
       <!--   <button class="btn-back"></button>-->
-       <a href="#" class="btn-back"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></a></i>
+       <a href="#phone-number-view" class="btn-back"><i class="fa fa-chevron-circle-left fa-2x" aria-hidden="true"></a></i>
       </div>
       <div class="col-11">
         <h4>Verify your phone code</h4>
@@ -108,23 +110,23 @@
           <div class="form-row">
             <div class="input-group col-6 mb-2">
               <span><i class="fa fa-user-o fa-fw"></i></span>
-              <input type="text" class="form-control" placeholder="First name" aria-label="Firstname" aria-describedby="basic-addon1">
+              <input type="text" id="personal-form-name" class="form-control" placeholder="First name" aria-label="Firstname" aria-describedby="basic-addon1" required>
             </div>
             <div class="input-group col-6 mb-2">
-              <input type="text" class="form-control" placeholder="Last name" aria-label="Lastname" aria-describedby="basic-addon1">
+              <input type="text" id="personal-form-last-name"class="form-control" placeholder="Last name" aria-label="Lastname" aria-describedby="basic-addon1" required>
             </div>
           </div>
           <div class="input-group">
             <span><i class="fa fa-envelope-o fa-fw"></i></span>
-            <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+            <input type="email" id="personal-form-email" class="form-control" placeholder="Email" aria-label="Email" formnovalidate="formnovalidate" aria-describedby="basic-addon1" required>
           </div>
           <div class="form-check p-2">
-            <input type="checkbox" class="form-check-input" id="checkTerms">
+            <input type="checkbox" class="form-check-input" id="checkTerms" required>
             <label class="form-check-label" for="checkTerms">I agree to Lyft´s <a href="#">Terms of service. </a></label>
           </div>
           <div class="row">
             <div class="col-12">
-              <button type="button" class="btn btn-block" id="btn-close-personal-info">Next</button>
+              <button type="submit" class="btn btn-block" id="btn-close-personal-info" disabled>Next</button>
             </div>
           </div>
 
@@ -147,6 +149,7 @@
 
   <!--++++++++Scripts ++++++++-->
 </body>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
